@@ -8,6 +8,6 @@
 
 3. Generate a blank Ionic 2 template
 
-    ionic start Ionic2FirstApp blank --v2
+    ionic start Ionic2RESTHttpExample blank --v2
 
 4. Copy content of a www and app project into a newly generated project
