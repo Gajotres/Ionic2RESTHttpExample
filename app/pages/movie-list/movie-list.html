@@ -6,9 +6,9 @@
 <ion-content padding>
   <ion-list>
     <ion-header>      
-      <ion-input>
-        <input type="text" placeholder="Search a movie..." (input)="searchMovieDB($event, searchKey)">
-      </ion-input>
+      <ion-item>
+        <ion-input type="text" placeholder="Search a movie..." (input)="searchMovieDB($event, searchKey)"></ion-input>
+      </ion-item>
     </ion-header>
 
     <ion-item *ngFor="#movie of movies">
