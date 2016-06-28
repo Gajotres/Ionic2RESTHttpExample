@@ -1,22 +1,23 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>
+			Movie List
+		</ion-title>
+	</ion-navbar>
+</ion-header>
 
-<ion-navbar *navbar>
-  <ion-title>Movie List</ion-title>
-</ion-navbar>
-
-<ion-content padding>
-  <ion-list>
-    <ion-header>      
-      <ion-item>
-        <ion-input type="text" placeholder="Search a movie..." (input)="searchMovieDB($event, searchKey)"></ion-input>
-      </ion-item>
-    </ion-header>
-
-    <ion-item *ngFor="#movie of movies">
-      <ion-avatar item-left>
-        <img src="https://image.tmdb.org/t/p/w92{{movie.poster_path}}"/>
-      </ion-avatar>
-      <h2>{{movie.original_title}}</h2>
-      <p class="item-description">{{movie.overview}}</p>
-    </ion-item>
-  </ion-list>
+<ion-content class="home" padding>
+	<ion-item>
+		<ion-input type="text" placeholder="Search a movie..." (input)="searchMovieDB($event, searchKey)"></ion-input>
+	</ion-item>
+	
+	<ion-list>	
+		<ion-item *ngFor="let movie of movies" (click)="itemTapped($event, movie)">
+			<ion-avatar item-left>
+				<img src="https://image.tmdb.org/t/p/w92{{movie.poster_path}}"/>
+			</ion-avatar>
+			<h2>{{movie.original_title}}</h2>
+			<p class="item-description">{{movie.overview}}</p>
+		</ion-item>
+	</ion-list>
 </ion-content>

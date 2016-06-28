@@ -7,5 +7,5 @@ Follow these instruction to deploy this example:
 3. ionic platform add android
 4. cordova plugin add cordova-plugin-whitelist
 5. npm install
-6. ionic serve -> To see if everything is working as it should
+6. ionic serve -l -c -s -> To see if everything is working as it should
 7. ionic run android -l -c -s
