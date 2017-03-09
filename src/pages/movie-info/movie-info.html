@@ -1,0 +1,20 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>
+			Movie Info
+		</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content class="home" padding>
+	<div *ngIf="movie" class="selection">
+		<ion-card>
+			<ion-item>
+				<h2>{{movie.title}}</h2>
+				<p>{{movie.release_date}}</p>
+			</ion-item>
+			
+			<img src="https://image.tmdb.org/t/p/w92{{movie.poster_path}}">
+		</ion-card>
+	</div>
+</ion-content>
